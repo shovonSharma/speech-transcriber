@@ -3,6 +3,8 @@
 ## System Architecture
 ![0](https://github.com/shovonSharma/speech-transcriber/blob/main/0.jpeg)
 
+## project structure
+
 ```bash
 speech-transcriber/
 ├── .dockerignore                  
@@ -36,6 +38,23 @@ speech-transcriber/
 └── venv/                          # ← keep venv, ignored by Docker
 ```
 
+## VOSK download
+
+```bash
+cd backend
+
+# Create model folder
+mkdir -p model
+
+# Download small English model (~40MB, perfect for CPU)
+wget -O vosk-model-small.zip https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.22.zip
+
+# Or use the one you already have (0.15 is also fine)
+# Just make sure it's EXTRACTED into: backend/model/vosk-model-small-en-us-0.15/
+
+unzip vosk-model-small.zip -d model/
+# → results in: model/vosk-model-small-en-us-0.15/
+```
 
 ## User Interface
 ![1](https://github.com/shovonSharma/speech-transcriber/blob/main/1.png)
