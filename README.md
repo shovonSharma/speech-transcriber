@@ -10,7 +10,7 @@ A privacy-first, browser-based **speech-to-text** application that works complet
 
 Ideal for offline transcription, local AI demos, or learning real-time speech-to-text systems.
 
-### System Architecture
+## System Architecture
 ![0](https://github.com/shovonSharma/speech-transcriber/blob/main/0.jpeg)
 
 ### Why This Stack?
@@ -107,10 +107,10 @@ docker-compose up
 docker-compose up -d
 ```
 
-### User Interface
+## User Interface
 ![1](https://github.com/shovonSharma/speech-transcriber/blob/main/1.png)
 
-### Database
+## Database
 
 #### Database Schema (`sessions` table)
 
@@ -140,7 +140,7 @@ docker-compose up -d
 
 ![2](https://github.com/shovonSharma/speech-transcriber/blob/main/2.png)
 
-### Testing
+## Testing
 #### TEST-1 → Proves FastAPI starts + Vosk model loads successfully
 
 #### TEST-2 → Proves core real-time flow works (WebSocket → receives audio → Vosk processes it → saves to DB → appears in /sessions)
@@ -156,6 +156,6 @@ python -m pytest -q
 and you will see something like this.
 ![3](https://github.com/shovonSharma/speech-transcriber/blob/main/3.png)
 
-### Limitation
+## Limitation
 
 Vosk’s lightweight models (<40 Mb) prioritize speed and CPU efficiency over raw accuracy. While not as precise as Whisper (especially in noisy conditions or with heavy accents), the small English model used here delivers **more than enough accuracy for clear speech** — with the huge advantage of **real-time performance on CPU, near-instant transcription and full offline/privacy support**.
